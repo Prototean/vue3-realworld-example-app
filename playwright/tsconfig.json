@@ -12,6 +12,12 @@
     "noEmit": false,
     "isolatedModules": false
   },
+  "exclude": [
+    "node_modules",
+    "playwright", 
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
   "include": [
     ".",
     "../config/*"
