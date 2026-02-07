@@ -4,7 +4,7 @@ on:
     branches: 
       - master
 
-  jobs:
+jobs:
     deploy-app:
       runs-on: ubuntu-latest
       steps:
