@@ -6,13 +6,13 @@ on:
 
   jobs:
     deploy-app:
-      runs-on: ubuntu-lastest
+      runs-on: ubuntu-latest
       steps:
         - name : check out the code to build server
           uses: actions/checkout@v4
         - uses: pnpm/action-setup@v4
           with: 
-            version: 10
+            version: 9
             run_install: false
         - name: Use Node.js 20.x
           uses: actions/setup-node@v4
@@ -21,7 +21,7 @@ on:
             cache: 'pnpm'
         - name: build the code
           run : |
-            pnpm install --on-frozen-lockfile
+            pnpm install --no-frozen-lockfile
             pnpm build
         - name: copy file to server
           uses: appleboy/scp-action@master
